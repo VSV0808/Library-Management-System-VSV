@@ -5,14 +5,14 @@ on:
             type: string
 
 jobs:
-  runs-on: ubuntu-latest
-  steps:
-    -name: Checkout repo 
-     uses: actions/checkout@v2
-     run: |
-      git branch
-      date > output.txt
-      git add .
-      git commit -m"sample commit using runner"
-      git push
+  TestRun:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: |
+          git branch
+          date > output.txt
+          git add .
+          git commit -m"sample commit using runner"
+          git push
  
