@@ -10,6 +10,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: |
+          git config user.name ${{github.event.inputs.name}}
+          git config user.email srivijay1234530@gmail.com
           git branch
           date > output.txt
           git add .
